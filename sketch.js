@@ -32,6 +32,39 @@ function draw() {
 	var angleSec = map(sec, 0,59,1,360);
 	var halfangleSec = map(sec, 0,59,181,360);
 	var lineleft = map(sec,0,59,200,370);
+
+	/* Var_Zwei */
+
+	var arczwei = map(sec, 0,59,181,405);
+
+	/* Var_Drei */
+
+	var arcdrei = map(sec, 0,59,181,450);
+
+	/* Var_Vier */
+
+	var linevier = map(sec,0,59,100,470);
+
+	/* Var_Fünf */
+
+	var linefuenf = map(sec, 0,59,100,280);
+
+	/* Var_Sieben */
+
+	var linesieben = map(sec, 0,59,2210,2400);
+
+	/* Var_Acht */
+
+	var arcacht = map(sec, 0,59,0,360);
+
+	/* Var_Neun */
+
+	var arcneun = map(sec, 0,59,0,360);
+
+	/* Var_o */
+
+	var arco = map(sec, 0,59,181,360);
+
 	var h = 500;
 	var m = 1000;
 
@@ -310,7 +343,7 @@ function draw() {
 	stroke(color(0,222,252,220)),
 	strokeWeight(20),
 	noFill(),
-	arc(3400, 200+h, 200, 200, 180, 360),
+	arc(3400, 200+h, 200, 200, 180, arco),
 	stroke(color(0,252,232,220)),
 	arc(3400, 370+h, 200, 200, 0, 180),
 	stroke(color(0,180,252,220)),
@@ -327,7 +360,7 @@ function draw() {
 
 	/* Eins */
 
-	if ((min == 1) || (min == 11) || (min == 21)|| (min == 31) || (min == 41) || (min == 51)){
+	/* if ((min == 1) || (min == 11) || (min == 21)|| (min == 31) || (min == 41) || (min == 51)){ */
 
 	let eins = (
 
@@ -338,7 +371,7 @@ function draw() {
 	line(100, 200+m, 200, 100+m)
 	);
 
-	} else if ((min == 2) || (min == 12) || (min == 22)|| (min == 32) || (min == 42) || (min == 52)){
+	/* } else if ((min == 2) || (min == 12) || (min == 22)|| (min == 32) || (min == 42) || (min == 52)){ */
 
 	/* Zwei */
 
@@ -346,14 +379,14 @@ function draw() {
 
 	strokeWeight(20),
 	noFill(),
-	arc(500, 200+m, 200, 200, 180, 405),
+	arc(500, 200+m, 200, 200, 180, arczwei),
 	stroke(color(0,222,252,220)),
 	line(416, 470+m, 570, 272+m),
 	stroke(color(0,252,232,220)),
 	line(416, 470+m, 600, 470+m)
 	);
 
-} else if ((min == 3) || (min == 13) || (min == 23)|| (min == 33) || (min == 43) || (min == 53)){
+/* } else if ((min == 3) || (min == 13) || (min == 23)|| (min == 33) || (min == 43) || (min == 53)){ */
 
 	/* Drei */
 
@@ -362,20 +395,20 @@ function draw() {
 	strokeWeight(20),
 	noFill(),
 	stroke(color(0,222,252,220)),
-	arc(900, 180+m, 180, 180, 180, 450),
+	arc(900, 180+m, 180, 180, 180, arcdrei),
 	stroke(color(0,252,232,220)),
 	arc(900, 370+m, 200, 200, 270, 180)
 
 	);
 
-} else if ((min == 4) || (min == 14) || (min == 24)|| (min == 34) || (min == 44) || (min == 54)){
+/* } else if ((min == 4) || (min == 14) || (min == 24)|| (min == 34) || (min == 44) || (min == 54)){ */
 
 	/* Vier */
 
 	let vier = (
 
 	stroke(color(0,252,232,220)),
-	line(1300, 470+m, 1300, 100+m),
+	line(1300, linevier+m, 1300, 100+m),
 	stroke(color(0,222,252,220)),
 	line(1136, 330+m, 1300, 100+m),
 	stroke(color(0,180,252,220)),
@@ -384,7 +417,7 @@ function draw() {
 	);
 
 
-} else if ((min == 5) || (min == 15) || (min == 25)|| (min == 35) || (min == 45) || (min == 55)){
+/* } else if ((min == 5) || (min == 15) || (min == 25)|| (min == 35) || (min == 45) || (min == 55)){ */
 
 	/* Fünf */
 
@@ -395,13 +428,13 @@ function draw() {
 	stroke(color(0,252,232,220)),
 	arc(1600, 360+m, 240, 240, 224, 160),
 	stroke(color(0,180,252,220)),
-	line(1512, 280+m, 1512, 100+m),
+	line(1512, linefuenf+m, 1512, 100+m),
 	stroke(color(0,252,232,220)),
 	line(1512, 100+m, 1690, 100+m)
 
 	);
 
-} else if ((min == 7) || (min == 17) || (min == 27)|| (min == 37) || (min == 47) || (min == 57)){
+/* } else if ((min == 7) || (min == 17) || (min == 27)|| (min == 37) || (min == 47) || (min == 57)){ */
 
 	/* Sieben */
 
@@ -412,13 +445,13 @@ function draw() {
 	stroke(color(0,180,252,220)),
 	line(2300, 470+m, 2400, 100+m),
 	stroke(color(0,252,232,220)),
-	line(2210, 100+m, 2400, 100+m),
+	line(2210, 100+m, linesieben, 100+m),
 	stroke(color(0,180,252,220)),
 	line(2210, 170+m, 2210, 100+m)
 
 	);
 
-} else if ((min == 8) || (min == 18) || (min == 28)|| (min == 38) || (min == 48) || (min == 58)){
+/* } else if ((min == 8) || (min == 18) || (min == 28)|| (min == 38) || (min == 48) || (min == 58)){ */
 
 	/* Acht */
 
@@ -429,11 +462,11 @@ function draw() {
 	stroke(color(0,222,252,220)),
 	arc(2650, 180+m, 180, 180, 0, 360),
 	stroke(color(0,252,232,220)),
-	arc(2650, 370+m, 200, 200, 0, 360)
+	arc(2650, 370+m, 200, 200, 360, arcacht)
 
 	);
 
-} else if ((min == 9) || (min == 19) || (min == 29)|| (min == 39) || (min == 49) || (min == 59)){
+/* } else if ((min == 9) || (min == 19) || (min == 29)|| (min == 39) || (min == 49) || (min == 59)){ */
 
 	/* Neun */
 
@@ -442,7 +475,7 @@ function draw() {
 	stroke(color(0,222,252,220)),
 	strokeWeight(20),
 	noFill(),
-	arc(3000, 200+m, 200, 200, 0, 360),
+	arc(3000, 200+m, 200, 200, 0, arcneun),
 	stroke(color(0,252,232,220)),
 	arc(3000, 370+m, 200, 200, 0, 155),
 	stroke(color(0,180,252,220)),
@@ -451,7 +484,7 @@ function draw() {
 	);
 
 
-} else if ((min == 6) || (min == 16) || (min == 26)|| (min == 36) || (min == 46) || (min == 56)){
+/* } else if ((min == 6) || (min == 16) || (min == 26)|| (min == 36) || (min == 46) || (min == 56)){ */
 
 	/* Sechs */
 
@@ -476,7 +509,7 @@ function draw() {
 	line(1900, 200+m, 1900, lineleft+m)
 
 	);
-	}
+/*	} */
 
 }
 
