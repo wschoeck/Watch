@@ -55,11 +55,11 @@ function draw() {
 
 	/* Var_Acht */
 
-	var arcacht = map(sec, 0,59,0,360);
+	var arcacht = map(sec, 0,59,1,360);
 
 	/* Var_Neun */
 
-	var arcneun = map(sec, 0,59,0,360);
+	var arcneun = map(sec, 0,59,1,360);
 
 	/* Var_o */
 
@@ -176,7 +176,7 @@ function draw() {
 
 	);
 
-} else if ((hr == 8) || (hr == 22)){
+} else if ((hr == 8) || (hr == 20)){
 
 	let achtstunde = (
 
@@ -269,7 +269,67 @@ function draw() {
 
 	/* Zehner */
 
-	if ((min > 10) && (min < 20)){
+	if ((min == 0) || (min == 10) || (min == 20)|| (min == 30) || (min == 40) || (min == 50)){
+
+		/* O */
+
+		let o = (
+
+		stroke(color(0,222,252,220)),
+		strokeWeight(20),
+		noFill(),
+		arc(3400, 200+h, 200, 200, 180, arco),
+		stroke(color(0,252,232,220)),
+		arc(3400, 370+h, 200, 200, 0, 180),
+		stroke(color(0,180,252,220)),
+		line(3300, 200+h, 3300, 370+h),
+		stroke(color(0,180,252,220)),
+		line(3500, 200+h, 3500, 370+h)
+
+		);
+}
+
+	if ((min > 1) && (min < 10)){
+
+	/* O */
+
+	let o = (
+
+	stroke(color(0,222,252,220)),
+	strokeWeight(20),
+	noFill(),
+	arc(3400, 200+h, 200, 200, 180, 360),
+	stroke(color(0,252,232,220)),
+	arc(3400, 370+h, 200, 200, 0, 180),
+	stroke(color(0,180,252,220)),
+	line(3300, 200+h, 3300, 370+h),
+	stroke(color(0,180,252,220)),
+	line(3500, 200+h, 3500, 370+h)
+
+	);
+}
+
+	if (min == 0){
+
+	/* O */
+
+	let o = (
+
+	stroke(color(0,222,252,220)),
+	strokeWeight(20),
+	noFill(),
+	arc(3400, 200+m, 200, 200, 180, arco),
+	stroke(color(0,252,232,220)),
+	arc(3400, 370+m, 200, 200, 0, 180),
+	stroke(color(0,180,252,220)),
+	line(3300, 200+m, 3300, 370+m),
+	stroke(color(0,180,252,220)),
+	line(3500, 200+m, 3500, 370+m)
+
+	);
+}
+
+ 	if ((min > 9) && (min < 20)){
 
 	let einszehner = (
 
@@ -280,7 +340,7 @@ function draw() {
 	line(100, 200+h, 200, 100+h)
 	);
 
-} else if ((min > 20) && (min < 30)){
+} else if ((min > 19) && (min < 30)){
 
 	let zweizehner = (
 
@@ -293,7 +353,7 @@ function draw() {
 	line(416, 470+h, 600, 470+h)
 	);
 
-} else if ((min > 30) && (min < 40)){
+} else if ((min > 29) && (min < 40)){
 
 	let dreizehner = (
 
@@ -306,7 +366,7 @@ function draw() {
 
 	);
 
-} else if ((min > 40) && (min < 50)){
+} else if ((min > 39) && (min < 50)){
 
 	let vierzehner = (
 
@@ -319,7 +379,7 @@ function draw() {
 
 	);
 
-} else if ((min > 50) && (min < 60)){
+} else if ((min > 49) && (min < 60)){
 
 	let fuenfzehner = (
 
@@ -334,33 +394,13 @@ function draw() {
 
 	);
 
-}	else if ((min > 0) && (min < 1)){
-
-	/* O */
-
-	let o = (
-
-	stroke(color(0,222,252,220)),
-	strokeWeight(20),
-	noFill(),
-	arc(3400, 200+h, 200, 200, 180, arco),
-	stroke(color(0,252,232,220)),
-	arc(3400, 370+h, 200, 200, 0, 180),
-	stroke(color(0,180,252,220)),
-	line(3300, 200+h, 3300, 370+h),
-	stroke(color(0,180,252,220)),
-	line(3500, 200+h, 3500, 370+h)
-
-	);
-
-
-	}
+}
 
 	/* Minuten_Einer */
 
 	/* Eins */
 
-	/* if ((min == 1) || (min == 11) || (min == 21)|| (min == 31) || (min == 41) || (min == 51)){ */
+if ((min == 1) || (min == 11) || (min == 21)|| (min == 31) || (min == 41) || (min == 51)){
 
 	let eins = (
 
@@ -371,7 +411,7 @@ function draw() {
 	line(100, 200+m, 200, 100+m)
 	);
 
-	/* } else if ((min == 2) || (min == 12) || (min == 22)|| (min == 32) || (min == 42) || (min == 52)){ */
+} else if ((min == 2) || (min == 12) || (min == 22)|| (min == 32) || (min == 42) || (min == 52)){
 
 	/* Zwei */
 
@@ -386,7 +426,7 @@ function draw() {
 	line(416, 470+m, 600, 470+m)
 	);
 
-/* } else if ((min == 3) || (min == 13) || (min == 23)|| (min == 33) || (min == 43) || (min == 53)){ */
+} else if ((min == 3) || (min == 13) || (min == 23)|| (min == 33) || (min == 43) || (min == 53)){
 
 	/* Drei */
 
@@ -401,7 +441,7 @@ function draw() {
 
 	);
 
-/* } else if ((min == 4) || (min == 14) || (min == 24)|| (min == 34) || (min == 44) || (min == 54)){ */
+} else if ((min == 4) || (min == 14) || (min == 24)|| (min == 34) || (min == 44) || (min == 54)){
 
 	/* Vier */
 
@@ -417,7 +457,7 @@ function draw() {
 	);
 
 
-/* } else if ((min == 5) || (min == 15) || (min == 25)|| (min == 35) || (min == 45) || (min == 55)){ */
+} else if ((min == 5) || (min == 15) || (min == 25)|| (min == 35) || (min == 45) || (min == 55)){
 
 	/* Fünf */
 
@@ -434,7 +474,7 @@ function draw() {
 
 	);
 
-/* } else if ((min == 7) || (min == 17) || (min == 27)|| (min == 37) || (min == 47) || (min == 57)){ */
+} else if ((min == 7) || (min == 17) || (min == 27)|| (min == 37) || (min == 47) || (min == 57)){
 
 	/* Sieben */
 
@@ -451,7 +491,7 @@ function draw() {
 
 	);
 
-/* } else if ((min == 8) || (min == 18) || (min == 28)|| (min == 38) || (min == 48) || (min == 58)){ */
+} else if ((min == 8) || (min == 18) || (min == 28)|| (min == 38) || (min == 48) || (min == 58)){
 
 	/* Acht */
 
@@ -466,7 +506,7 @@ function draw() {
 
 	);
 
-/* } else if ((min == 9) || (min == 19) || (min == 29)|| (min == 39) || (min == 49) || (min == 59)){ */
+} else if ((min == 9) || (min == 19) || (min == 29)|| (min == 39) || (min == 49) || (min == 59)){
 
 	/* Neun */
 
@@ -484,7 +524,7 @@ function draw() {
 	);
 
 
-/* } else if ((min == 6) || (min == 16) || (min == 26)|| (min == 36) || (min == 46) || (min == 56)){ */
+} else if ((min == 6) || (min == 16) || (min == 26)|| (min == 36) || (min == 46) || (min == 56)){
 
 	/* Sechs */
 
@@ -509,7 +549,7 @@ function draw() {
 	line(1900, 200+m, 1900, lineleft+m)
 
 	);
-/*	} */
+	}
 
 }
 
